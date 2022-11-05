@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update && apt upgrade \
-&& apt install -y openfortivpn socat ssh
+&& apt install -y openfortivpn socat
 
 COPY ./start.sh .
 
