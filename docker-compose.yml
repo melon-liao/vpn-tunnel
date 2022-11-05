@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  vpn-tunnel:
+    build: .
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - "./socat.sh:/socat.sh"
+    environment:
+      HOST:
+      PORT:
+      USER:
+      PASS:
+    ports:
+      - ''
